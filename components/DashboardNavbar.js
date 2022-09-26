@@ -1,5 +1,6 @@
 import dashnav from '../styles/DashboardNavbar.module.css'
 import {HiHome} from 'react-icons/hi'
+import{IoIosLogOut} from 'react-icons/io'
 import {IoNotificationsSharp} from 'react-icons/io5'
 import { auth } from '../firebase';
 import { Router } from 'next/router';
@@ -25,7 +26,8 @@ function DashboardNavbar() {
     <div className={dashnav.main}>
         <HiHome />
         <IoNotificationsSharp/>
-        <button onClick={sigoutuser}> logOut</button>
+        <IoIosLogOut className='iconexit' onClick={sigoutuser}/>
+        {/* <button > logOut</button> */}
     </div>
   )
 }
