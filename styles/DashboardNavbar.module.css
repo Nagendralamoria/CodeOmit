@@ -1,0 +1,13 @@
+.main{
+    width: 4rem;
+    background-color: rgb(43, 43, 43);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}

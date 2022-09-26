@@ -1,0 +1,17 @@
+.navbarmain{
+
+ background-color: #96C3FF;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 0rem 1rem;
+}
+.navbarmain>h2{
+    margin: 0.8rem 0rem;
+}
+.navbarlist{
+    display: flex;
+    cursor: pointer;
+    gap: 1rem;
+    color: rgb(82, 82, 82);
+    justify-content: flex-end;
+}
