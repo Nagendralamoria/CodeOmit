@@ -131,19 +131,19 @@ function Dashboard() {
                 <div className={dashcss.designcodeinputbox}>
                         <h3>Enter the data</h3>
                         <form onSubmit={formshandleSubmit} className={dashcss.designcodeform} >
-                        <label for="fname">Name of component:</label>
+                        <label htmlFor="fname">Name of component:</label>
                         <input type="text" id="cName" name="name" value={name} onChange={(e)=>{setName(e.target.value)}}/>
-                        <label for="fname">Name of designer/coder:</label>
+                        <label htmlFor="fname">Name of designer/coder:</label>
                         <input type="text" id="cName" name="name" value={nameofcoder} onChange={(e)=>{setNameofcoder(e.target.value)}}/>
                         
-                        <label for="sl">Select Language</label>
+                        <label htmlFor="sl">Select Language</label>
                         <select name="language" id="language" onClick={(e)=>{setOpenTab(e.target.value)}} className={dashcss.designselect}>
                           <option value="1">Html</option>
                           <option value="2">ReactJs</option>
                           <option value="3">NextJs</option>
                         
                         </select>
-                        <label for="fname" >Code of component:</label>
+                        <label htmlFor="fname" >Code of component:</label>
                         <textarea style={{
                             display: openTab==="1" ? 'block':'none',
                             height:'10rem',
@@ -156,10 +156,10 @@ function Dashboard() {
                         display: openTab==="3" ? 'block':'none',
                         height:'10rem',
               }} value={langangular} onChange={(e)=>{setLangangular(e.target.value)}}  id="cCode" name="code"/>
-                        <label for="fname" >Instruction:</label>
+                        <label htmlFor="fname" >Instruction:</label>
                         <textarea value={codeinst} onChange={(e)=>{setCodeinst(e.target.value)}} style={{height:'10rem'}} id="cCode" name="code"/>
                        
-                        <label for="lname">Design Png </label>
+                        <label htmlFor="lname">Design Png </label>
                         <input type="file" id="lname" name="lname" onChange={handleChange}/>
                         <input className={dashcss.submitbutton}   type="submit" value="Submit"/>
                         </form>
@@ -170,7 +170,7 @@ function Dashboard() {
         return(
           <div>
             
-              <Dashboarditemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} Id={Componentscod.compId}/>
+              <Dashboarditemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} key={Componentscod.compId} Id={Componentscod.compId}/>
             </div>
         )
       })

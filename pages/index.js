@@ -49,9 +49,7 @@ export default function Home() {
       componentscode.map((Componentscod)=>{
         return(
           <div>
-             <Itemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} Id={Componentscod.compId}/>
-             <Itemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} Id={Componentscod.compId}/>
-              <Itemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} Id={Componentscod.compId}/>
+               <Itemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} key={Componentscod.compId} Id={Componentscod.compId}/>
             </div>
         )
       })
