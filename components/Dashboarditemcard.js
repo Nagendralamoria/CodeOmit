@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import {  ref, deleteObject } from "firebase/storage";
 import Swal from 'sweetalert2';
 
-function dashboarditemcard(props) {
+function Dashboarditemcard(props) {
   const desertRef = ref(storage,`${props.imageref}` );
 
  const deleteitem=(Id)=>{
@@ -50,4 +50,4 @@ function dashboarditemcard(props) {
   )
 }
 
-export default dashboarditemcard
+export default Dashboarditemcard
