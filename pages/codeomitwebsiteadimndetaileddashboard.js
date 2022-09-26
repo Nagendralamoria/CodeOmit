@@ -168,9 +168,9 @@ function Dashboard() {
                 {
       componentscode.map((Componentscod)=>{
         return(
-          <div>
+          <div key={Componentscod.compId}>
             
-              <Dashboarditemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code} key={Componentscod.compId} Id={Componentscod.compId}/>
+              <Dashboarditemcard name={Componentscod.name} imageref={Componentscod.compimage} lang={componentscode.language} code={Componentscod.code}  Id={Componentscod.compId}/>
             </div>
         )
       })
