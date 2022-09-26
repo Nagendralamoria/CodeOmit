@@ -8,7 +8,7 @@ import { getDownloadURL, ref, uploadBytes, uploadBytesResumable } from "firebase
 import Swal from "sweetalert2";
 import { onAuthStateChanged } from "firebase/auth";
 import Router from 'next/router'
-function dashboard() {
+function Dashboard() {
   const [userin,SetUserIn]=useState(false);
  
 
@@ -182,4 +182,4 @@ function dashboard() {
   )
 }
 
-export default dashboard
+export default Dashboard

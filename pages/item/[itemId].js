@@ -13,7 +13,7 @@ import { CopyBlock, dracula } from 'react-code-blocks';
 
 
 
-function itempage() {
+function Itempage() {
     const [isActive, setIsActive] = useState(true);
 
     const [openTab, setOpenTab] = useState(1);
@@ -178,4 +178,4 @@ function itempage() {
   )
 }
 
-export default itempage
+export default Itempage

@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
 import Router from 'next/router'
 import Swal from 'sweetalert2';
-function codeomitadminlogin() {
+function Codeomitadminlogin() {
   const [email,setEmail]=useState("");
   const[password,setPassword]=useState("");
   const sigin=()=>{
@@ -38,4 +38,4 @@ function codeomitadminlogin() {
   )
 }
 
-export default codeomitadminlogin
+export default Codeomitadminlogin
