@@ -40,11 +40,11 @@ function Itempage() {
   return (
     <div className={pagecss.pagemain}  >
         <BiArrowBack className={pagecss.backicon} onClick={() => router.back()}/>
-        <h3>{componentscode?.nameofcoder}</h3>
+        <h2>{componentscode?.nameofcoder}</h2>
         
         <div className={pagecss.designgrid}>
           <div className={pagecss.previewcodebuttonbody}>
-          <h2>{componentscode?.name}</h2>
+          {/* <h2>{componentscode?.name}</h2> */}
             <div className={pagecss.previewcodebutton}>
 
               <button 
@@ -89,14 +89,14 @@ function Itempage() {
                     onClick={()=> {
                       setOpenTab(1);
                     }}
-                    >Html</h3>
+                    >HTML</h3>
                     <h3  style={{
                         backgroundColor: openTab===2 ? '#282a36':'white',
                         color: openTab===2 ? 'white' : 'rgb(80, 80, 80)',
                 }}
                     onClick={()=> {
                       setOpenTab(2);
-                    }}>React js</h3>
+                    }}>React JS</h3>
                     <h3  style={{
                         backgroundColor: openTab===3 ? '#282a36':'white',
                         color: openTab===3 ? 'white' : 'rgb(80, 80, 80)',

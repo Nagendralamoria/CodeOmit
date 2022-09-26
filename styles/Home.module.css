@@ -200,7 +200,7 @@ border-radius: 0.5rem;
     display: grid;
     background-color: #96C3FF;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 2rem;
     /* position: fixed; */
     font-family: sans-serif;
     justify-content: space-around;
@@ -208,13 +208,16 @@ border-radius: 0.5rem;
   
   .homemainheadtext>h1{
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 0.7rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding: 0rem;
     font-weight: 800;
     color: #293462;
   
   }
   .homemainheadtext>h3{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #293462;
     margin-bottom: 3rem;
   }
@@ -223,7 +226,7 @@ border-radius: 0.5rem;
     height: 3rem;
     margin-top: -1.5rem;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 85% 15%;
     background-color: #96C3FF;
     align-items: center;
     justify-items: center;
@@ -257,10 +260,28 @@ border-radius: 0.5rem;
     display: grid;
     justify-content: center;
     width: 100%;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 45% 45%;
   z-index: 9999;
   background-color: white;
     margin-bottom: 2rem;
-  gap: 1.5rem;
+  gap: 1rem;
   } 
+  .itemcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    cursor: pointer;
+  }
+  .itemcard>h3{
+    margin: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .itemcard>img{
+    width: 100%;
+    height: 10rem;
+  border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
 }
