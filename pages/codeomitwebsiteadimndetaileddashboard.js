@@ -30,7 +30,7 @@ function Dashboard() {
    
       const uid = user.uid;
       SetUserIn(true);
-      console.log(uid);
+      // console.log(uid);
       // ...
     } else {
            Router.push('/codeomitadmintitanicthanos');

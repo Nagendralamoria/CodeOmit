@@ -43,7 +43,7 @@ const opennotify=()=>setNotify(!notify);
   return (
     <>
     <div className={dashnav.main}>
-        <HiHome />
+        <HiHome onClick={()=>{setNotify(false)}}/>
         <IoNotificationsSharp onClick={()=>opennotify()}/>
         <IoIosLogOut className='iconexit' onClick={sigoutuser}/>
         {/* <button > logOut</button> */}
@@ -54,7 +54,7 @@ const opennotify=()=>setNotify(!notify);
           datamessage.map((message)=>{
             return(
               <div key={message.email}>
-                  <Messagesbox email={message.email} msg={message.message}/>
+                  <Messagesbox email={message.email} id={message.messageId} msg={message.message}/>
               </div>
             )
           })

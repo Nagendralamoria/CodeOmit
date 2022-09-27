@@ -3,15 +3,17 @@ import { useRouter } from 'next/router'
 import {BiArrowBack} from 'react-icons/bi'
 import contactcss from '../styles/Contactus.module.css'
 import { db } from '../firebase';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 function Contactus() {
-  const componentsCollectionRef = collection(db,"Messages");
   const [email,setEmail]=useState('');
   const [message,setMessage]=useState('');
   const formshandleSubmit=(e)=>{
     e.preventDefault();
-  const docRef = addDoc(collection(db,"Messages"), {
+  const docRef = doc(collection(db,"Messages")); 
+
+  setDoc(docRef,{
+    messageId:docRef.id,
     email:email,
     message:message
   }).then(()=>{
