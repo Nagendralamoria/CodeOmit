@@ -53,7 +53,7 @@ const opennotify=()=>setNotify(!notify);
         {
           datamessage.map((message)=>{
             return(
-              <div >
+              <div key={message.email}>
                   <Messagesbox email={message.email} msg={message.message}/>
               </div>
             )

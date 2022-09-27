@@ -32,9 +32,9 @@ function Contactus() {
       <div className={contactcss.insidebox}>
         <h1> Lets have a talk</h1>
         <form onSubmit={formshandleSubmit}  method="post" className={contactcss.messageform}>
-          <label for="last">Email:</label>
+          <label htmlFor="last">Email:</label>
           <input onChange={(e)=>{setEmail(e.target.value)}} value={email} type="email" id="last" name="last" />
-          <label for="first">Message:</label>
+          <label htmlFor="first">Message:</label>
           <textarea onChange={(e)=>{setMessage(e.target.value)}} value={message} id="w3review" name="w3review" rows="4" cols="50"></textarea>
           <button type="submit">Submit</button>
         </form>
