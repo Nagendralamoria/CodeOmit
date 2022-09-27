@@ -14,6 +14,27 @@
 .iconexit{
     color: white;
 }
+.opennotifybox{
+    position:absolute;
+    left: 4rem;
+    background-color: rgb(43, 43, 43);
+    gap: 1rem;
+    height: 100%;
+    width: 95%;
+    display: grid;
+    grid-template-columns:30% 30% 30%  ;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+}
+.messagebody{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    background-color: white;
+}
 @media (max-width:600px) {
 
 .main{
@@ -29,4 +50,21 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-}}
+}
+.opennotifybox{
+    position:absolute;
+    left: 0rem;
+    top: 4rem;
+    background-color: rgb(43, 43, 43);
+    
+    height: 100%;
+    gap: 0.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+}
+
+}

@@ -7,6 +7,9 @@
     padding: 0rem 1rem;
     
 }
+.navbarmain>h3{
+    cursor: pointer;
+}
 .navbarmain>h2{
     margin: 0.8rem 0rem;
 }

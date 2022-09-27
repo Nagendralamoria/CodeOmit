@@ -10,7 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import Router from 'next/router'
 function Dashboard() {
   const [userin,SetUserIn]=useState(false);
- 
+
 
  const [name,setName]=useState("");
  const [openTab,setOpenTab]=useState("1");
