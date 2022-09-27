@@ -63,3 +63,123 @@
     padding: 0.5rem;
     cursor: pointer;
 }
+@media (max-width:600px) {
+    .arrow{
+        position:absolute;
+        font-size: 2rem;
+        color: #293462;
+        cursor: pointer;
+        left: 0.5rem;
+        top: 0.5rem;
+    }   
+    .insidebox>h1{
+        color: #293462 ;
+        font-size: 3rem;
+        margin: 0rem;
+        margin-bottom: 2rem;
+        text-align: center;
+       }
+       .messageform{
+           display: flex;
+           flex-direction: column;
+        
+           gap: 0.5rem;
+       }
+       .messageform>label{
+           font-size: 1.5rem;
+           font-weight: 500;
+           color: #293462 ;
+       }
+       .messageform>input{
+           padding: 0.5rem;
+           border: none;
+           border-radius: 1rem;
+           color: white;
+           border:0.2rem solid #293462;
+           background-color: #293462 ;
+       }
+       .messageform>textarea{
+           padding: 0.5rem;
+           height: 10rem;
+           border-radius: 1rem;
+           background-color: #293462;
+           color: white;
+        
+           border: 0.2rem solid #293462;
+       }
+       .messageform>button{
+           background-color: #293462;
+           color: white;
+           border: none;
+           border-radius: 1rem;
+           font-size: 1.2rem;
+           font-weight: 500;
+           padding: 0.5rem;
+           cursor: pointer;
+       }
+}
+@media (max-width:450px) {
+    .arrow{
+        position:absolute;
+        font-size: 1.5rem;
+        color: #293462;
+        cursor: pointer;
+        left: 0.5rem;
+        top: 0.5rem;
+    }   
+    .insidebox>h1{
+        color: #293462 ;
+        font-size: 2rem;
+        margin: 0rem;
+        margin-bottom: 2rem;
+        text-align: center;
+       }
+       .messageform{
+           display: flex;
+           flex-direction: column;
+            width: 80%;
+           gap: 0.5rem;
+       }
+       .messageform>label{
+           font-size: 1.5rem;
+           font-weight: 500;
+           color: #293462 ;
+       }
+       .messageform>input{
+           padding: 0.5rem;
+           border: none;
+          
+           border-radius: 1rem;
+           color: white;
+           border:0.2rem solid #293462;
+           background-color: #293462 ;
+       }
+       .messageform>textarea{
+           padding: 0.5rem;
+           height: 7rem;
+           border-radius: 1rem;
+           background-color: #293462;
+           color: white;
+          
+           border: 0.2rem solid #293462;
+       }
+       .messageform>button{
+           background-color: #293462;
+           color: white;
+           border: none;
+
+           border-radius: 1rem;
+           font-size: 1.2rem;
+           font-weight: 500;
+           padding: 0.5rem;
+           cursor: pointer;
+       }
+     .insidebox{
+        display: flex;
+  
+        flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+} 
+}
