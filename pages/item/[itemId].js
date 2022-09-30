@@ -19,7 +19,7 @@ function Itempage() {
     const [openTab, setOpenTab] = useState(1);
   
      const router = useRouter()
-    const { itemId } = router.query
+    const  itemId  = router.query.itemId;
     const [componentscode,setComponentcode]=useState([]);
     const componentsCollectionRef = doc(db,"componentscode",`${itemId}`);
     useEffect(()=>{
@@ -36,7 +36,7 @@ function Itempage() {
     };
     
       getComponents();
-    },[])
+    },[itemId])
   return (
     <div className={pagecss.pagemain}  >
         <BiArrowBack className={pagecss.backicon} onClick={() => router.back()}/>

@@ -7,11 +7,32 @@ import { collection, getDocs, onSnapshot, orderBy, query, QuerySnapshot } from '
 import { db } from '../firebase';
 import { useEffect, useState } from 'react';
 import Image  from 'next/image';
+import Fuse from 'fuse.js';
 import logo from '../public/Images/4.png'
+import Searchbar from '../components/Searchbar';
+import Router from 'next/router';
 export default function Home() {
- 
+
+ const[searchedcode,setSearchedCode]=useState([]);
   const [componentscode,setComponentcode]=useState([]);
   const componentsCollectionRef = collection(db,"componentscode");
+  const [searchdata,setSearchData]=useState("");
+ const senddata =()=>{
+
+     
+       if (searchdata=='') {
+      
+         console.log('nothing');
+         // console.log(uid);
+         // ...
+       } else {
+              Router.push(`search/${searchdata}`);
+         
+       }
+
+   
+}
+   
   useEffect(()=>{
 
     const getComponents = async()=>{
@@ -22,6 +43,11 @@ export default function Home() {
     };
     getComponents();
   },[]) 
+
+// useEffect(() => {
+//   setSearchedCode(fuse.search(searchdata))
+//   console.log(fuse.search(searchdata),"good data")
+// }, [searchdata])
   return (
     <>
     <Navbar/>
@@ -41,9 +67,13 @@ export default function Home() {
           
      </div>
       <div className={mainpagecss.searchbar}>
-         <input type="text" placeholder='Search the code </>'/>
-          <GoSearch className={mainpagecss.icons}/>
-      </div>
+         {/* <input type="text" onChange={(e)=>{setSearchData(e.target.value)}} placeholder='Search the code </>'/>
+          <GoSearch className={mainpagecss.icons} /> */}
+             <input type="text" onChange={(e)=>{setSearchData(e.target.value)}} value={searchdata} placeholder='Search the code </>'/>
+    <GoSearch className={mainpagecss.icons} onClick={senddata}  />
+    </div>
+          {/* <Searchbar/> */}
+      
      <div className={mainpagecss.cardsgrid}> 
     {
       componentscode.map((Componentscod)=>{

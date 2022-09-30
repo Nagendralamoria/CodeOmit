@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "firebase": "^9.9.0",
+    "fuse.js": "^6.6.2",
     "next": "12.2.0",
     "react": "18.2.0",
     "react-code-blocks": "^0.0.9-0",
