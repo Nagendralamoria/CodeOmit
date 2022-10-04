@@ -1,11 +1,14 @@
 import Navbarcss from '../styles/Navbar.module.css'
-import logo from '../public/Images/3.png';
+import logo from '../public/Images/logo.png';
 import Link from 'next/link';
+import Image from 'next/image';
 function Navbar() {
   return (
     <div className={Navbarcss.navbarmain}>
-        {/* <img src={logo} alt='logo'/> */}
-        <h2>Codeomit</h2>
+        
+      <Link href='/'>
+        <div className={Navbarcss.logo}><Image src='/Images/logo1.webp' width="40px" height="50px"></Image> <h2>Codeomit</h2></div>
+         </Link>
        <Link href='/contactus'>
        <h3>Contact Us</h3>
         </Link> 

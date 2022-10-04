@@ -1,0 +1,126 @@
+.searchmainbody>h1{
+        text-align: center;
+        font-size: 3rem;
+        background-color: #96C3FF;
+        color: #293462;
+        margin: 0rem;
+        padding: 1rem 0rem 4rem 0rem ;
+}
+.searchmainbody>h1::first-letter {
+    text-transform:capitalize;
+}
+.searchinput{
+    width: 100%;
+    display: flex;
+    margin-top: -2rem;
+    justify-content: center;
+}
+.innersearchbar{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+   
+    border-radius: 1rem;
+    width: 50%;
+    display: flex;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    justify-content: center;
+}
+.innersearchbar>input{
+    width: 95%;
+    font-size: 1rem;
+    border: none;
+    padding: 1rem;
+    
+   
+    border-radius: 0.5rem;
+}
+.innersearchbar>input:focus{
+    border: none;
+    outline: none;
+}
+.searchicon{
+    background-color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+.cardsgrid{
+    margin-top:3rem;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: 22% 22% 22% 22%;
+  /* z-index: 9999;
+  background-color: white; */
+    margin-bottom: 2rem;
+  gap: 1.5rem;
+  }
+
+  @media (max-width:900px) {
+
+        .cardsgrid{
+            margin-top:2rem;
+            display: grid;
+            justify-content: center;
+            width: 100%;
+            grid-template-columns: 30% 30% 30%;
+          z-index: 9999;
+          background-color: white;
+            margin-bottom: 2rem;
+          gap: 1rem;
+          } 
+          .innersearchbar{
+            padding: 0.5rem 1rem 0.5rem 1rem;
+           
+            border-radius: 1rem;
+            width: 70%;
+            display: flex;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            align-items: center;
+            justify-content: center;
+        }
+        .innersearchbar>input{
+            width: 95%;
+            font-size: 1rem;
+            border: none;
+            padding: 0.5rem;
+            
+           
+            border-radius: 0.5rem;
+        }
+      }
+  @media (max-width:600px) {
+    .cardsgrid{
+        margin-top:2rem;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        grid-template-columns: 45% 45%;
+      z-index: 9999;
+      background-color: white;
+        margin-bottom: 2rem;
+      gap: 1rem;
+      } 
+      .innersearchbar{
+        padding: 0.5rem 1rem 0.5rem 1rem;
+       
+        border-radius: 1rem;
+        width: 70%;
+        display: flex;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        align-items: center;
+        justify-content: center;
+    }
+    .innersearchbar>input{
+        width: 95%;
+        font-size: 1rem;
+        border: none;
+        padding: 0.5rem;
+        
+       
+        border-radius: 0.5rem;
+    }
+  }

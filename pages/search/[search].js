@@ -3,8 +3,9 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Searchcard from '../../components/Itemcard'
 import { db } from '../../firebase';
+import Navbar from '../../components/Navbar'
 import Fuse from 'fuse.js';
-import mainpagecss from '../../styles/Home.module.css'
+import Searchpagecss from '../../styles/Searchpage.module.css'
 import { async } from '@firebase/util';
 import Searchbar from '../../components/Searchbar';
 function Searchpage() {
@@ -44,10 +45,13 @@ function Searchpage() {
   },[searchdata])
        
   return (
-    <div className={mainpagecss.cardsgrid}>
+    <div className={Searchpagecss.searchmainbody}>
+      <Navbar/>
       <h1>{searchdata}</h1>
+      <div className={Searchpagecss.searchinput}>
         <Searchbar data={searchdata} getdata={setSearchData}/>
-      
+        </div>
+      <div className={Searchpagecss.cardsgrid}>
       {querydata.map((Componentscod)=>{
         return(
          
@@ -56,6 +60,7 @@ function Searchpage() {
             </div>
         )
       })}
+      </div>
     </div>
   )
 }
