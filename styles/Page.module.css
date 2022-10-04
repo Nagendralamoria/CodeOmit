@@ -97,6 +97,10 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+@media (max-width:900px) {
+    .pagetext>p{
+        font-size:0.8rem;}
+}
 @media (max-width:600px) {
     .pagemain{
         margin: 0.5rem;
@@ -187,6 +191,8 @@
         border-radius: 0.5rem 0.5rem 0rem 0rem; 
     
     }
- 
+    .pagetext>p{
+        font-size: 0.6rem;
+    }
     
 }

@@ -21,14 +21,17 @@ function Itempage() {
      const router = useRouter()
     const  itemId  = router.query.itemId;
     const [componentscode,setComponentcode]=useState([]);
+    const [relatedpost,setRelatedPost]=useState([]);
     const componentsCollectionRef = doc(db,"componentscode",`${itemId}`);
+ 
     useEffect(()=>{
   
       const getComponents = async()=>{
         const data = await getDoc(componentsCollectionRef);
         setComponentcode(data.data());
         if (data.exists()) {
-            console.log("Document data:", data.data());
+            console.log("Document data:", data.data().name);
+            
           } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
@@ -149,7 +152,7 @@ function Itempage() {
               </div>
            
             </div>
-          <div className={pagecss.relatedpostmain}>
+          {/* <div className={pagecss.relatedpostmain}>
                 <h3>Related Posts </h3>
                 <div className={pagecss.relatedpostgrid}>
                   <Itemcard/>
@@ -162,7 +165,7 @@ function Itempage() {
                   <Itemcard/>
                 
                 </div>
-          </div>  
+          </div>   */}
           {/* <div className={pagecss.relatedmarketgoodmain}>
            <hr className={pagecss.realtedline}/> <h3 >Something you may like</h3>
             <div className={pagecss.relatedmarketgrid}>

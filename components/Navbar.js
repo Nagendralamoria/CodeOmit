@@ -7,7 +7,9 @@ function Navbar() {
     <div className={Navbarcss.navbarmain}>
         
       <Link href='/'>
-        <div className={Navbarcss.logo}><Image src='/Images/logo1.webp' width="40px" height="50px"></Image> <h2>Codeomit</h2></div>
+        <div className={Navbarcss.logo}>
+        {/* <Image src='/Images/logo1.webp' layout="responsive" width="100px" height="100px"></Image> */}
+           <h2>Codeomit</h2></div>
          </Link>
        <Link href='/contactus'>
        <h3>Contact Us</h3>

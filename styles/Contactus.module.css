@@ -64,6 +64,7 @@
     cursor: pointer;
 }
 @media (max-width:600px) {
+   
     .arrow{
         position:absolute;
         font-size: 2rem;
@@ -176,7 +177,7 @@
        }
      .insidebox{
         display: flex;
-  
+         width: 100%; 
         flex-direction: column;
    justify-content: center;
    align-content: center;
