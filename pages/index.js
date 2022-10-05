@@ -11,8 +11,10 @@ import Fuse from 'fuse.js';
 import logo from '../public/Images/4.png'
 import Searchbar from '../components/Searchbar';
 import Router from 'next/router';
+import Footer from '../components/Footer';
+import Skeletongrey from '../components/Skeletongrey';
 export default function Home() {
-
+  const [loadingpage,setLoadingPage] = useState(false);
  const[searchedcode,setSearchedCode]=useState([]);
   const [componentscode,setComponentcode]=useState([]);
   const componentsCollectionRef = collection(db,"componentscode");
@@ -40,12 +42,13 @@ export default function Home() {
       setComponentcode(data.docs.map((doc)=>({
         ...doc.data(),id:doc.compId
       })));
+      setLoadingPage(true);
     };
     getComponents();
   },[]) 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      console.log('do validate')
+      // console.log('do validate')
       senddata();
     }
   }
@@ -75,7 +78,7 @@ export default function Home() {
     <GoSearch className={mainpagecss.icons} onClick={senddata}  />
     </div>
           {/* <Searchbar/> */}
-      
+      {loadingpage?
      <div className={mainpagecss.cardsgrid}> 
     {
       componentscode.map((Componentscod)=>{
@@ -87,8 +90,24 @@ export default function Home() {
       })
     }
      
-     </div>
+     </div>:
+     <div className={mainpagecss.cardsgrid}> 
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+      <Skeletongrey/>
+     </div>}
     </div>
+   <Footer/>
     </>
   )
 }

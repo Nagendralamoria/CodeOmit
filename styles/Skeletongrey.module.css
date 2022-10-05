@@ -1,0 +1,43 @@
+
+  .cardani {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 13rem;
+    background-image: linear-gradient(
+      90deg,
+      #ccc 0px,
+      rgb(255 229 229/90%) 40px,
+      #ccc 80px
+    );
+    background-size: 300%;
+    background-position: 100% 0;
+    border-radius: inherit;
+    animation: wave 1.5s infinite;
+  }
+ 
+  .cardan {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    background-image: linear-gradient(
+      90deg,
+      #ccc 0px,
+      rgb(255 229 229/90%) 40px,
+      #ccc 80px
+    );
+    background-size: 300%;
+    background-position: 100% 0;
+    border-radius: inherit;
+    animation: wave 1.5s infinite;
+  }
+ 
+  
+  @keyframes wave {
+    to {
+      background-position: -100% 0;
+    }
+  }

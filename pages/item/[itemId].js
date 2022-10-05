@@ -10,12 +10,15 @@ import {AiOutlineEye,AiOutlineArrowLeft,AiOutlineArrowRight} from 'react-icons/a
 import Itemcard from '../../components/Itemcard'
 import {BsCodeSlash} from 'react-icons/bs'
 import { CopyBlock, dracula } from 'react-code-blocks';
+import Footer from '../../components/Footer';
+import Skeletongrey from '../../components/Skeletongrey';
+import Imageskeleton from '../../components/Imageskeleton';
 
 
 
 function Itempage() {
     const [isActive, setIsActive] = useState(true);
-
+      const[loadingpage,setLoadingPage]=useState(false);
     const [openTab, setOpenTab] = useState(1);
   
      const router = useRouter()
@@ -29,18 +32,20 @@ function Itempage() {
       const getComponents = async()=>{
         const data = await getDoc(componentsCollectionRef);
         setComponentcode(data.data());
-        if (data.exists()) {
-            console.log("Document data:", data.data().name);
+        setLoadingPage(true);
+        // if (data.exists()) {
+        //     console.log("Document data:", data.data().name);
             
-          } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-          }
+        //   } else {
+        //     // doc.data() will be undefined in this case
+        //     console.log("No such document!");
+        //   }
     };
     
       getComponents();
     },[itemId])
   return (
+    <>
     <div className={pagecss.pagemain}  >
         <BiArrowBack className={pagecss.backicon} onClick={() => router.back()}/>
         <h2>{componentscode?.nameofcoder}</h2>
@@ -72,9 +77,13 @@ function Itempage() {
           </div>
         </div>
           {isActive?(
-   
+                 
             <div className={pagecss.designbox} >
+                {loadingpage?
                 <img src={componentscode?.compimage}/>
+                :
+                <Imageskeleton />
+                }
               </div>
               // <div className={pagecss.zoomin} onClick={()=>{setZoomimg(true)}} >
               //   <MapInteractionCSS>
@@ -178,6 +187,8 @@ function Itempage() {
             </div>
           </div> */}
     </div>
+    <Footer/>
+    </>
   )
 }
 

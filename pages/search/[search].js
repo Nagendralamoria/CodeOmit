@@ -8,13 +8,15 @@ import Fuse from 'fuse.js';
 import Searchpagecss from '../../styles/Searchpage.module.css'
 import { async } from '@firebase/util';
 import Searchbar from '../../components/Searchbar';
+import Footer from '../../components/Footer';
+import Skeletongrey from '../../components/Skeletongrey';
 function Searchpage() {
   const router = useRouter();
   const [querydata,setQueryData]=useState([]);
   const [searchdata,setSearchData]=useState();
   const [componentscode,setComponentcode]=useState([]);
   const componentsCollectionRef = collection(db,"componentscode");
-
+ const [loadingpage,setLoadingPage]=useState(false);
 
   const fuse = new Fuse(componentscode, {
     keys: ['name', 'compinst']
@@ -28,6 +30,7 @@ function Searchpage() {
         ...doc.data(),id:doc.compId
       })
       ))
+      setLoadingPage(true);
       setSearchData(router.query.search);
     };
    
@@ -45,13 +48,16 @@ function Searchpage() {
   },[searchdata])
        
   return (
+
+    <>
+   
     <div className={Searchpagecss.searchmainbody}>
       <Navbar/>
       <h1>{searchdata}</h1>
       <div className={Searchpagecss.searchinput}>
         <Searchbar data={searchdata} getdata={setSearchData}/>
         </div>
-      <div className={Searchpagecss.cardsgrid}>
+      {loadingpage?<div className={Searchpagecss.cardsgrid}>
       {querydata.map((Componentscod)=>{
         return(
          
@@ -60,8 +66,30 @@ function Searchpage() {
             </div>
         )
       })}
+      </div>:
+      <div className={Searchpagecss.cardsgrid}>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        <Skeletongrey/>
+        
       </div>
+      }
+
     </div>
+    <Footer/>
+    </>
   )
 }
 
