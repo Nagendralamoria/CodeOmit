@@ -21,11 +21,21 @@ function Searchbar(props) {
 
       
    }
+   const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('do validate')
+      senddata();
+    }
+  }
+
+
       
     
   return (
-    <div className={Searchpagecss.innersearchbar}>  <input type="text" onChange={(e)=>{setSearchData(e.target.value)}} value={searchdata} placeholder='Search the code </>'/>
-    <GoSearch onClick={senddata}  className={Searchpagecss.searchicon} /></div>
+    <div className={Searchpagecss.innersearchbar}> 
+     <input type="text" onKeyDown={handleKeyDown} onChange={(e)=>{setSearchData(e.target.value)}} value={searchdata} placeholder='Search the code </>'/>
+    <GoSearch onClick={senddata}  className={Searchpagecss.searchicon} />
+    </div>
   )
 }
 

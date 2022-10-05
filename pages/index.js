@@ -43,11 +43,13 @@ export default function Home() {
     };
     getComponents();
   },[]) 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('do validate')
+      senddata();
+    }
+  }
 
-// useEffect(() => {
-//   setSearchedCode(fuse.search(searchdata))
-//   console.log(fuse.search(searchdata),"good data")
-// }, [searchdata])
   return (
     <>
     <Navbar/>
@@ -69,7 +71,7 @@ export default function Home() {
       <div className={mainpagecss.searchbar}>
          {/* <input type="text" onChange={(e)=>{setSearchData(e.target.value)}} placeholder='Search the code </>'/>
           <GoSearch className={mainpagecss.icons} /> */}
-             <input type="text" onChange={(e)=>{setSearchData(e.target.value)}} value={searchdata} placeholder='Search the code </>'/>
+             <input type="text" onKeyDown={handleKeyDown} onChange={(e)=>{setSearchData(e.target.value)}} value={searchdata} placeholder='Search the code </>'/>
     <GoSearch className={mainpagecss.icons} onClick={senddata}  />
     </div>
           {/* <Searchbar/> */}
