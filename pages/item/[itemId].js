@@ -130,28 +130,80 @@ function Itempage() {
           showLineNumbers={true}
           wrapLines
         />
+        <h1>CSS</h1>
+         <CopyBlock  style={{whiteSpace: 'pre-line'}}
+            
+            language="css"
+            text={componentscode?.CSS}
+            codeBlock
+            theme={dracula}
+            showLineNumbers={true}
+            wrapLines
+          />
+           <h1>JS</h1>
+         <CopyBlock  style={{whiteSpace: 'pre-line'}}
+            
+            language="js"
+            text={componentscode?.JS}
+            codeBlock
+            theme={dracula}
+            showLineNumbers={true}
+            wrapLines
+          />
         </div>
         <div style={{
                         display: openTab===2 ? 'block':'none',
                    
               }}>
+                
          <CopyBlock  
           language="jsx"
           text={componentscode?.reactjs}
           codeBlock
           theme={dracula}
           showLineNumbers={false}
-        /></div>
+        />
+        <h1>CSS</h1>
+         <CopyBlock  
+          language="css"
+          text={componentscode?.reactcss}
+          codeBlock
+          theme={dracula}
+          showLineNumbers={false}
+        />
+        
+        </div>
+        
         <div style={{
                         display: openTab===3 ? 'block':'none',
                 }}>
          <CopyBlock  
           language="html"
-          text={componentscode?.angular}
+          text={componentscode?.angularHtml}
           codeBlock
           theme={dracula}
           showLineNumbers={false}
-        /></div>
+        />
+         <h1>CSS</h1>
+         <CopyBlock  style={{whiteSpace: 'pre-line'}}
+            language="css"
+            text={componentscode?.angularCss}
+            codeBlock
+            theme={dracula}
+            showLineNumbers={true}
+            wrapLines
+          />
+           <h1>JS</h1>
+         <CopyBlock  style={{whiteSpace: 'pre-line',
+         }}
+            language="js"
+            text={componentscode?.angularJs}
+            codeBlock
+            theme={dracula}
+            showLineNumbers={true}
+            wrapLines
+          />
+        </div>
                 </div>
               )}
               <div className={pagecss.pagetext}>

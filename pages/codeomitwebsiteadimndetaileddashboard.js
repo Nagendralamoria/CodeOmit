@@ -18,8 +18,13 @@ function Dashboard() {
  const [compImg,setCompImg]=useState(null);
  const [progress,setProgress]=useState(0);
  const [langhtml,setLanghtml]=useState("");
+ const [langhtmlcss,setLanghtmlcss]=useState("");
+ const [langhtmljs,setLanghtmljs]=useState("");
  const [langreact,setLangreact]=useState("");
+ const [langreactcss,setLangreactcss]=useState("");
  const [langangular,setLangangular]=useState("");
+ const [langangularcss,setLangangularcss]=useState("");
+ const [langangularjs,setLangangularjs]=useState("");
  const [codeinst,setCodeinst]=useState("");
  const [componentscode,setComponentcode]=useState([]);
  const componentsCollectionRef = collection(db,"componentscode");
@@ -85,8 +90,13 @@ function Dashboard() {
             nameofcoder:nameofcoder,
             codeinst:codeinst,
             html:langhtml,
+            CSS:langangularcss,
+            JS:langangularjs,
             reactjs:langreact,
-            angular:langangular,
+            reactcss:langreactcss,
+            angularHtml:langangular,
+            angularCss:langangularcss,
+            angularJs:langangularjs,
             compId:newRef.id,
             compimage:url,
           })
@@ -144,18 +154,86 @@ function Dashboard() {
                         
                         </select>
                         <label htmlFor="fname" >Code of component:</label>
+                        <label style={{
+                            display: openTab==="1" ? 'block':'none',
+                           
+                            }}>Html Code</label>
                         <textarea style={{
                             display: openTab==="1" ? 'block':'none',
                             height:'10rem',
                             }} value={langhtml} onChange={(e)=>{setLanghtml(e.target.value)}}  id="cCode" name="code"/>
+                              <label style={{
+                            display: openTab==="1" ? 'block':'none',
+                          
+                            }}>CSS Code</label>
+                              <textarea style={{
+                            display: openTab==="1" ? 'block':'none',
+                            height:'10rem',
+                            }} value={langhtmlcss} onChange={(e)=>{setLanghtmlcss(e.target.value)}}  id="cCode" name="code"/>
+                              <label style={{
+                            display: openTab==="1" ? 'block':'none',
+                           
+                            }}>JS Code</label>
+                              <textarea style={{
+                            display: openTab==="1" ? 'block':'none',
+                            height:'10rem',
+                            }} value={langhtmljs} onChange={(e)=>{setLanghtmljs(e.target.value)}}  id="cCode" name="code"/>
+
+
+
+
+                        <label style={{
+                            display: openTab==="2" ? 'block':'none',
+                         
+                            }}>JS Code</label>
                         <textarea style={{
                             display: openTab==="2" ? 'block':'none',
                             height:'10rem',
                             }} value={langreact} onChange={(e)=>{setLangreact(e.target.value)}}  id="cCode" name="code"/>
+                           <label style={{
+                            display: openTab==="2" ? 'block':'none',
+                            
+                            }}>CSS Code</label>
+                            <textarea style={{
+                            display: openTab==="2" ? 'block':'none',
+                            height:'10rem',
+                            }} value={langreactcss} onChange={(e)=>{setLangreactcss(e.target.value)}}  id="cCode" name="code"/>
+                        
+                           
+
+
+
+                        <label style={{
+                            display: openTab==="3" ? 'block':'none',
+                         
+                            }}>HTML Code</label>
                 <textarea style={{
                         display: openTab==="3" ? 'block':'none',
                         height:'10rem',
               }} value={langangular} onChange={(e)=>{setLangangular(e.target.value)}}  id="cCode" name="code"/>
+                  
+                  <label style={{
+                            display: openTab==="3" ? 'block':'none',
+                         
+                            }}>CSS Code</label>
+                  <textarea style={{
+                        display: openTab==="3" ? 'block':'none',
+                        height:'10rem',
+              }} value={langangularcss} onChange={(e)=>{setLangangularcss(e.target.value)}}  id="cCode" name="code"/>
+                 
+                 <label style={{
+                            display: openTab==="3" ? 'block':'none',
+                         
+                            }}>JS Code</label>
+                  <textarea style={{
+                        display: openTab==="3" ? 'block':'none',
+                        height:'10rem',
+              }} value={langangularjs} onChange={(e)=>{setLangangularjs(e.target.value)}}  id="cCode" name="code"/>
+
+
+
+
+
                         <label htmlFor="fname" >Instruction:</label>
                         <textarea value={codeinst} onChange={(e)=>{setCodeinst(e.target.value)}} style={{height:'10rem'}} id="cCode" name="code"/>
                        

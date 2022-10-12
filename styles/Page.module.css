@@ -59,9 +59,10 @@
 }
 .codebox{
   
-    overflow: scroll;
+    
     margin-top: 0.5rem  ;
-   max-height: 40rem;
+   /* max-height: 40rem; */
+   
 }
 .codeboxtabs{
     display: flex;
