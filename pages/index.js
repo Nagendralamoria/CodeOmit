@@ -39,10 +39,11 @@ export default function Home() {
 
     const getComponents = async()=>{
       const data = await getDocs(componentsCollectionRef);
+      setLoadingPage(true);
       setComponentcode(data.docs.map((doc)=>({
         ...doc.data(),id:doc.compId
       })));
-      setLoadingPage(true);
+      
     };
     getComponents();
   },[]) 
