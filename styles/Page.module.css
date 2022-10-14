@@ -87,6 +87,7 @@
 }
 .pagetext>p{
     margin: 0.5rem;
+    white-space: pre-wrap;
 }
 .relatedpostgrid{
     display: grid;
