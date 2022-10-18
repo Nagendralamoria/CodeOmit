@@ -90,8 +90,8 @@ function Dashboard() {
             nameofcoder:nameofcoder,
             codeinst:codeinst,
             html:langhtml,
-            CSS:langangularcss,
-            JS:langangularjs,
+            CSS:langhtmlcss,
+            JS:langhtmljs,
             reactjs:langreact,
             reactcss:langreactcss,
             angularHtml:langangular,
@@ -150,7 +150,7 @@ function Dashboard() {
                         <select name="language" id="language" onClick={(e)=>{setOpenTab(e.target.value)}} className={dashcss.designselect}>
                           <option value="1">Html</option>
                           <option value="2">ReactJs</option>
-                          <option value="3">NextJs</option>
+                          <option value="3">Angular</option>
                         
                         </select>
                         <label htmlFor="fname" >Code of component:</label>
