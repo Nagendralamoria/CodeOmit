@@ -121,6 +121,7 @@ function Itempage() {
                   <div  style={{
                         display: openTab===1 ? 'block':'none',
                 }}>
+                      <div className={pagecss.maxheightcontainer}>
                   <CopyBlock  style={{whiteSpace: 'pre-line'}}
             
           language="html"
@@ -130,7 +131,9 @@ function Itempage() {
           showLineNumbers={true}
           wrapLines
         />
-        <h1>CSS</h1>
+        </div>
+        <h2>CSS</h2>
+        <div className={pagecss.maxheightcontainer}>
          <CopyBlock  style={{whiteSpace: 'pre-line'}}
             
             language="css"
@@ -140,7 +143,11 @@ function Itempage() {
             showLineNumbers={true}
             wrapLines
           />
-           <h1>JS</h1>
+          </div>
+          
+           {componentscode?.JS!=''?
+           <> <h2>JS</h2>
+           <div className={pagecss.maxheightcontainer}>
          <CopyBlock  style={{whiteSpace: 'pre-line'}}
             
             language="js"
@@ -150,12 +157,14 @@ function Itempage() {
             showLineNumbers={true}
             wrapLines
           />
+          </div></>:null}
         </div>
+        
         <div style={{
                         display: openTab===2 ? 'block':'none',
                    
               }}>
-                
+                    <div className={pagecss.maxheightcontainer}>
          <CopyBlock  
           language="jsx"
           text={componentscode?.reactjs}
@@ -163,7 +172,9 @@ function Itempage() {
           theme={dracula}
           showLineNumbers={false}
         />
-        <h1>CSS</h1>
+        </div>
+        <h2>CSS</h2>
+        <div className={pagecss.maxheightcontainer}>
          <CopyBlock  
           language="css"
           text={componentscode?.reactcss}
@@ -171,20 +182,24 @@ function Itempage() {
           theme={dracula}
           showLineNumbers={false}
         />
-        
+        </div>
         </div>
         
-        <div style={{
+        <div  style={{
                         display: openTab===3 ? 'block':'none',
                 }}>
-         <CopyBlock  
+                  <div className={pagecss.maxheightcontainer}>
+         <CopyBlock 
           language="html"
           text={componentscode?.angularHtml}
           codeBlock
+    
           theme={dracula}
-          showLineNumbers={false}
+          showLineNumbers={true}
         />
-         <h1>CSS</h1>
+        </div>
+         <h2>CSS</h2>
+         <div className={pagecss.maxheightcontainer}>
          <CopyBlock  style={{whiteSpace: 'pre-line'}}
             language="css"
             text={componentscode?.angularCss}
@@ -193,8 +208,11 @@ function Itempage() {
             showLineNumbers={true}
             wrapLines
           />
-           <h1>JS</h1>
-         <CopyBlock  style={{whiteSpace: 'pre-line',
+          </div>
+          {componentscode?.JS!=''?<>
+           <h2>TS</h2>
+           <div className={pagecss.maxheightcontainer}>
+         <CopyBlock className={pagecss.maxheightcontainer} style={{whiteSpace: 'pre-line',
          }}
             language="js"
             text={componentscode?.angularJs}
@@ -202,10 +220,15 @@ function Itempage() {
             theme={dracula}
             showLineNumbers={true}
             wrapLines
+
           />
+        </div>
+        </>:null}
         </div>
                 </div>
               )}
+              <h1>{componentscode?.name}</h1>
+
               <div className={pagecss.pagetext}>
               <p>
                 {componentscode?.codeinst}

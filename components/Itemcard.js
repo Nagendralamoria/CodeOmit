@@ -10,7 +10,7 @@ function Itemcard(props) {
   return (
         <div className={mainpagecss.itemcard} onClick={()=>{getlinkfunction()}}>
         <img src={props.imageref} alt='new'/>
-      <h3>{props.name}</h3>
+      {/* <h3>{props.name}</h3> */}
     </div>
   )
 }

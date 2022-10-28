@@ -111,6 +111,21 @@ border-radius: 0.5rem;
 }
 
 
+@media (min-width:1432px) {
+  .cardsgrid{
+    margin-top:2rem;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+  z-index: 9999;
+  background-color: white;
+    margin-bottom: 2rem;
+  gap: 1.5rem;
+  }
+   
+}
+
 @media (max-width:900px) {
   .homemain{
     justify-content: center;
@@ -190,7 +205,6 @@ border-radius: 0.5rem;
   }
    
 }
-
 @media (max-width:600px) {
   .homemain{
     justify-content: center;
@@ -212,7 +226,7 @@ border-radius: 0.5rem;
   }
   
   .homemainheadtext>h1{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0.7rem;
     margin-top: 0rem;
     margin-bottom: 0rem;
@@ -227,7 +241,7 @@ border-radius: 0.5rem;
     margin-bottom: 3rem;
   }
   .searchbar{
-    width: 70%;
+    width: 95%;
 
     margin-top: -1.5rem;
     display: grid;
@@ -236,7 +250,7 @@ border-radius: 0.5rem;
     align-items: center;
     justify-items: center;
     border: solid;
-    border-width: 0.2rem;
+    border-width: 0.1rem;
     border-color: #96C3FF;
     border-radius: 0.5rem;
   
@@ -257,7 +271,7 @@ border-radius: 0.5rem;
   
   }
   .icons{
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
   .cardsgrid{
@@ -272,6 +286,8 @@ border-radius: 0.5rem;
   gap: 1rem;
   } 
   .itemcard{
+    margin: 0rem;
+   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -284,7 +300,111 @@ border-radius: 0.5rem;
   }
   .itemcard>img{
     width: 100%;
-    height: 10rem;
+    height:auto;
+  border-radius: 0.5rem;
+    object-fit: contain;
+  }
+
+}
+@media (max-width:400px) {
+  .homemain{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  .homemainhead{
+    display: grid;
+    background-color: #96C3FF;
+    width: 100%;
+    padding-top: 2rem;
+    /* position: fixed; */
+    font-family: sans-serif;
+    justify-content: space-around;
+  }
+  
+  .homemainheadtext>h1{
+    font-size: 2rem;
+    margin: 0.7rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding: 0rem;
+    font-weight: 800;
+    color: #293462;
+  
+  }
+  .homemainheadtext>h3{
+    font-size: 0.8rem;
+    color: #293462;
+    margin-bottom: 3rem;
+  }
+  .searchbar{
+    width: 95%;
+
+    margin-top: -1.5rem;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    background-color: #96C3FF;
+    align-items: center;
+    justify-items: center;
+    border: solid;
+    border-width: 0.1rem;
+    border-color: #96C3FF;
+    border-radius: 0.5rem;
+  
+  }
+  .searchbar>input[type='text']
+  {
+    border: none;
+    padding: 0rem 0.5rem;
+    width: 100%;
+  height: 100%;
+  
+  }
+  .searchbar>input:focus
+  {
+    border: none;
+    outline: none;
+
+  
+  }
+  .icons{
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .cardsgrid{
+    
+    margin-top:2rem;
+    display: grid;
+    justify-content: center;
+    
+    width: 100%;
+    grid-template-columns: 100%;
+  z-index: 9999;
+  background-color: white;
+    margin-bottom: 2rem;
+  gap: 1rem;
+  } 
+  .itemcard{
+    margin: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    cursor: pointer;
+  }
+  .itemcard>h3{
+    margin: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .itemcard>img{
+    width: 100%;
+    height: auto;
   border-radius: 0.5rem;
     object-fit: contain;
   }

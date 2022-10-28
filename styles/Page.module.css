@@ -86,7 +86,8 @@
     margin: 0.5rem;
 }
 .pagetext>p{
-    margin: 0.5rem;
+    margin: 0rem;
+    font-size: 1.25rem;
     white-space: pre-wrap;
 }
 .relatedpostgrid{
@@ -99,15 +100,32 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+.maxheightcontainer{
+max-height: 30rem;
+overflow-y: scroll;
+}
+.maxheightcontainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .maxheightcontainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 @media (max-width:900px) {
     .pagetext>p{
-        font-size:0.8rem;}
+        font-size:1rem;
+        margin: 0rem;}
 }
 @media (max-width:600px) {
     .pagemain{
         margin: 0.5rem;
         margin-top: 1rem;
         position: relative;
+    }
+    .designgrid>h1{
+        font-size: 1.5rem;
     }
     .pagemain>h2{
         justify-content: center;
@@ -170,9 +188,9 @@
     
     .codebox{
       
-        overflow: scroll;
+        
         margin-top: 0.5rem  ;
-       max-height: 40rem;
+     
     }
     .codeboxtabs{
         display: flex;
@@ -193,8 +211,13 @@
         border-radius: 0.5rem 0.5rem 0rem 0rem; 
     
     }
+    .pagetext{
+        overflow-wrap: break-word;
+    }
     .pagetext>p{
-        font-size: 0.6rem;
+        font-size: 0.9rem;
+        margin: 0rem;
+        line-height: 2rem;
     }
     
 }

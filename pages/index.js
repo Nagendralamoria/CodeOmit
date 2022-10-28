@@ -13,6 +13,7 @@ import Searchbar from '../components/Searchbar';
 import Router from 'next/router';
 import Footer from '../components/Footer';
 import Skeletongrey from '../components/Skeletongrey';
+import Head from 'next/head';
 export default function Home() {
   const [loadingpage,setLoadingPage] = useState(false);
  const[searchedcode,setSearchedCode]=useState([]);
@@ -40,7 +41,7 @@ export default function Home() {
     const getComponents = async()=>{
       const data = await getDocs(componentsCollectionRef);
       setLoadingPage(true);
-      setComponentcode(data.docs.map((doc)=>({
+      await setComponentcode(data.docs.map((doc)=>({
         ...doc.data(),id:doc.compId
       })));
       
@@ -57,6 +58,10 @@ export default function Home() {
   return (
     <>
     <Navbar/>
+    <Head>
+        <title>Codeomit</title>
+        <link rel="icon" href="./images/logo.png" />
+      </Head>
     <div className={mainpagecss.homemain}>
      <div className={mainpagecss.homemainhead}>
           <div className={mainpagecss.homemainheadtext}>
@@ -105,7 +110,7 @@ export default function Home() {
       <Skeletongrey/>
       <Skeletongrey/>
       <Skeletongrey/>
-      <Skeletongrey/>
+    
      </div>}
     </div>
    <Footer/>
