@@ -17,6 +17,7 @@ import Head from 'next/head';
 export default function Home() {
   const [loadingpage,setLoadingPage] = useState(false);
  const[searchedcode,setSearchedCode]=useState([]);
+
   const [componentscode,setComponentcode]=useState([]);
   const componentsCollectionRef = collection(db,"componentscode");
   const [searchdata,setSearchData]=useState("");

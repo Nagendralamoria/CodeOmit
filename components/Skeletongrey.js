@@ -4,7 +4,7 @@ function Skeletongrey() {
   return (
  
     <div className={skelcss.cardani}>
-   <p>Loading....</p> 
+   {/* <p>Loading....</p>  */}
     </div>
      )
 }

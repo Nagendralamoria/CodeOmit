@@ -6,7 +6,7 @@ function Itemcard(props) {
   return (<Link href={`item/${props.Id}`}>
         <div className={mainpagecss.itemcard}>
         <img src={props.imageref} alt='new'/>
-      <h3>{props.name}</h3>
+      {/* <h3>{props.name}</h3> */}
     </div></Link>
   )
 }

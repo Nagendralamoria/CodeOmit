@@ -5,15 +5,15 @@ import Searchcard from '../../components/Itemcard'
 import { db } from '../../firebase';
 import Navbar from '../../components/Navbar'
 import Fuse from 'fuse.js';
-import Searchpagecss from '../../styles/Searchpage.module.css'
+import Searchpagecss from '../../styles/Tagspage.module.css'
 import { async } from '@firebase/util';
 import Searchbar from '../../components/Searchbar';
 import Footer from '../../components/Footer';
 import Skeletongrey from '../../components/Skeletongrey';
-function Searchpage() {
+function TagsId() {
   const router = useRouter();
-  const r = router.query.search;
-    const [querydata,setQueryData]=useState([]);
+  const r = router.query.tagsId;
+  const [querydata,setQueryData]=useState([]);
   const [searchdata,setSearchData]=useState();
   const [componentscode,setComponentcode]=useState([]);
   const componentsCollectionRef = collection(db,"componentscode");
@@ -37,12 +37,14 @@ function Searchpage() {
      
   },[])
    useEffect(()=>{
+    // console.log("asdasdsad",componentscode);
+    
     const getSearchedData = async()=>{
-      const res = await(fuse.search(`${ searchdata}`));
+      const res = await(fuse.search(`${searchdata}`));
       await setQueryData(res); 
     
     } 
-    setSearchData(router.query.search);
+    setSearchData(router.query.tagsId);
     getSearchedData();
    },[componentscode,searchdata,r])
 
@@ -62,7 +64,7 @@ function Searchpage() {
     <div className={Searchpagecss.searchmainbody}>
       <Navbar/>
       <h1>{searchdata}</h1>
-
+    <p>Looking for more such impressive components? <br></br>Browse our search results</p>
       <div className={Searchpagecss.searchinput}>
         <Searchbar data={searchdata} getdata={setSearchData}/>
         </div>
@@ -102,4 +104,4 @@ function Searchpage() {
   )
 }
 
-export default Searchpage
+export default TagsId

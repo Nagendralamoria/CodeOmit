@@ -193,7 +193,7 @@ function Itempage() {
           language="html"
           text={componentscode?.angularHtml}
           codeBlock
-    
+                
           theme={dracula}
           showLineNumbers={true}
         />

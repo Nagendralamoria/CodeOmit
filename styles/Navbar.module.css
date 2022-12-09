@@ -13,8 +13,20 @@
    
     
 }
-.navbarmain>h3{
+.navbarlinks{
+    display: flex;
+ 
+}
+.navbarlinks>h3{
+    margin: 0rem;
     cursor: pointer;
+    padding:0.3rem 1rem;
+}
+.navbarlinks>h3:hover{
+    background-color: #293462;
+    color:#96C3FF;
+    border-radius: 1rem;
+    padding:0.3rem 1rem;
 }
 .logo>h2{
     cursor: pointer;
