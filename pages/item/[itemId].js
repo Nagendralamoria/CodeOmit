@@ -13,6 +13,7 @@ import { CopyBlock, dracula } from 'react-code-blocks';
 import Footer from '../../components/Footer';
 import Skeletongrey from '../../components/Skeletongrey';
 import Imageskeleton from '../../components/Imageskeleton';
+import Head from 'next/head';
 
 
 
@@ -46,6 +47,15 @@ function Itempage() {
     },[itemId])
   return (
     <>
+    <Head>
+        <title>{componentscode?.name} - Codeomit</title>
+        <meta name="description" content={`${componentscode?.codeinst}`} />
+        <meta property="og:title" content={`${componentscode?.name} - Codeomit`} />
+        <meta property="og:description" content={`${componentscode?.codeinst}`} />
+        <meta property="og:url" content={`https://codeomit/item/${itemId}`} />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+</Head>
     <div className={pagecss.pagemain}  >
         <BiArrowBack className={pagecss.backicon} onClick={() => router.back()}/>
         <h2>{componentscode?.nameofcoder}</h2>

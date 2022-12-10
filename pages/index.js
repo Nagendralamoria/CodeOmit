@@ -6,10 +6,6 @@ import Navbar from '../components/Navbar'
 import { collection, getDocs, onSnapshot, orderBy, query, QuerySnapshot } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useEffect, useState } from 'react';
-import Image  from 'next/image';
-import Fuse from 'fuse.js';
-import logo from '../public/Images/4.png'
-import Searchbar from '../components/Searchbar';
 import Router from 'next/router';
 import Footer from '../components/Footer';
 import Skeletongrey from '../components/Skeletongrey';
@@ -61,6 +57,12 @@ export default function Home() {
     <Navbar/>
     <Head>
         <title>Codeomit</title>
+            <meta name="description" content="All the components code you need to create a amazing website at one place. It contains well written, well optimize code in different languages  like React JS, HTML5, Angular....  "  />
+            <meta property="og:title" content="Codeomit" />
+            <meta property="og:description" content="All the components code you need to create a amazing website at one place. It contains well written, well optimize code in different languages  like React JS, HTML5, Angular....  " />
+            <meta property="og:url" content="https://codeomit.com/" />
+            <meta property="og:type" content="website" />
+        
         <link rel="icon" href="./images/logo.png" />
       </Head>
     <div className={mainpagecss.homemain}>
