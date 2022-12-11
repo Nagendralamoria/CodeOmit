@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
 import Navbar from '../components/Navbar'
@@ -5,6 +6,10 @@ import tagcss from '../styles/Tagspage.module.css'
 function tags() {
   return (
     <>
+      <Head>
+    <link rel="icon" href="/favicon.ico" />
+       
+      </Head>
     <Navbar/>
     <div className={tagcss.tagsparent}>
       <h1>Popular Tags</h1>

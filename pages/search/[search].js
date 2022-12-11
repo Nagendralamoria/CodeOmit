@@ -10,6 +10,7 @@ import { async } from '@firebase/util';
 import Searchbar from '../../components/Searchbar';
 import Footer from '../../components/Footer';
 import Skeletongrey from '../../components/Skeletongrey';
+import Head from 'next/head';
 function Searchpage() {
   const router = useRouter();
   const r = router.query.search;
@@ -58,7 +59,10 @@ function Searchpage() {
   return (
 
     <>
-   
+    <Head>
+    <link rel="icon" href="/favicon.ico" />
+       
+      </Head> 
     <div className={Searchpagecss.searchmainbody}>
       <Navbar/>
       <h1>{searchdata}</h1>

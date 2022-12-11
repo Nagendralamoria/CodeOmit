@@ -10,6 +10,7 @@ import { async } from '@firebase/util';
 import Searchbar from '../../components/Searchbar';
 import Footer from '../../components/Footer';
 import Skeletongrey from '../../components/Skeletongrey';
+import Head from 'next/head';
 function TagsId() {
   const router = useRouter();
   const r = router.query.tagsId;
@@ -60,7 +61,16 @@ function TagsId() {
   return (
 
     <>
-   
+    <Head>
+        <title>{searchdata} responsive free code using ReactJS, HTML5, Angular - Codeomit</title>
+        <meta name="keywords" content="Data Structures,Algorithms,UI,UI Design,UX/UI,Figma,Python,Java,C,C++,JavaScript,Android Development,SQL,Data Science,Machine Learning,PHP,Web Development,System Design,Tutorial,Technical Blogs,Interview Experience,Interview Preparation,Programming,Competitive Programming,SDE Sheet,Job-a-thon,Coding Contests,GATE CSE,HTML,CSS,React,NodeJS,Placement,Aptitude,Quiz,Computer Science,Programming Examples,GeeksforGeeks Courses,Puzzles"></meta>
+        <meta name="description" content={`${searchdata} UI Design with its code in React Js, Angular and HTML 5.`} />
+        <meta property="og:title" content={`${searchdata} responsive code using ReactJS, HTML5, Angular - Codeomit`} />
+        <meta property="og:description" content={`All the components code you need to create a amazing website at one place. It contains well written, well optimize code in different languages  like React JS, HTML5, Angular.... `} />
+        <meta property="og:url" content={`https://codeomit/tags/${searchdata}`} />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+</Head>
     <div className={Searchpagecss.searchmainbody}>
       <Navbar/>
       <h1>{searchdata}</h1>

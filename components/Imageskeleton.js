@@ -4,7 +4,7 @@ function Imageskeleton() {
   return (
  
     <div className={skelcss.cardan}>
-   <p>Loading....</p> 
+   {/* <p>Loading....</p>  */}
     </div>
      )
 }

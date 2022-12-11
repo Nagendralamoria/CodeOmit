@@ -5,6 +5,7 @@ import contactcss from '../styles/Contactus.module.css'
 import { db } from '../firebase';
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
+import Head from 'next/head';
 function Contactus() {
   const [email,setEmail]=useState('');
   const [message,setMessage]=useState('');
@@ -29,6 +30,12 @@ function Contactus() {
   
   const router = useRouter()
   return (
+    <>
+       <Head>
+    <link rel="icon" href="/favicon.ico" />
+       
+      </Head> 
+  
     <div className={contactcss.mainbox} >
       <BiArrowBack className={contactcss.arrow} onClick={() => router.back()}/>
       <div className={contactcss.insidebox}>
@@ -43,6 +50,7 @@ function Contactus() {
       </div>
 
     </div>
+    </>
   )
 }
 
