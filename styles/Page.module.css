@@ -86,10 +86,12 @@
     margin: 0.5rem;
 }
 .pagetext>p{
-    margin: 0rem;
-    font-size: 1.25rem;
     white-space: pre-wrap;
 }
+.miniblogdivs{
+    margin-left: 2rem;
+  }
+
 .relatedpostgrid{
     display: grid;
     gap: 1rem;
@@ -113,6 +115,7 @@ overflow-y: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+
 @media (max-width:900px) {
     .pagetext>p{
         font-size:1rem;

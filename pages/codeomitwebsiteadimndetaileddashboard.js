@@ -13,6 +13,7 @@ function Dashboard() {
 
 
  const [name,setName]=useState("");
+ const [titlename,setTitlename]=useState("");
  const [openTab,setOpenTab]=useState("1");
  const[nameofcoder,setNameofcoder]=useState("");
  const [compImg,setCompImg]=useState(null);
@@ -26,8 +27,10 @@ function Dashboard() {
  const [langangularcss,setLangangularcss]=useState("");
  const [langangularjs,setLangangularjs]=useState("");
  const [codeinst,setCodeinst]=useState("");
+ const [codecred,setCodecred]=useState("");
  const [componentscode,setComponentcode]=useState([]);
  const componentsCollectionRef = collection(db,"componentscode");
+
 
  useEffect(()=>{
   onAuthStateChanged(auth, (user) => {
@@ -87,8 +90,10 @@ function Dashboard() {
 
            setDoc(newRef, {
             name: name,
+            titlename:titlename,
             nameofcoder:nameofcoder,
             codeinst:codeinst,
+            codecred:codecred,
             html:langhtml,
             CSS:langhtmlcss,
             JS:langhtmljs,
@@ -143,6 +148,8 @@ function Dashboard() {
                         <form onSubmit={formshandleSubmit} className={dashcss.designcodeform} >
                         <label htmlFor="fname">Name of component:</label>
                         <input type="text" id="cName" name="name" value={name} onChange={(e)=>{setName(e.target.value)}}/>
+                        <label htmlFor="fname">Title of component:</label>
+                        <input type="text" id="tName" name="tname" value={titlename} onChange={(e)=>{setTitlename(e.target.value)}}/>
                         <label htmlFor="fname">Name of designer/coder:</label>
                         <input type="text" id="cName" name="name" value={nameofcoder} onChange={(e)=>{setNameofcoder(e.target.value)}}/>
                         
@@ -236,6 +243,9 @@ function Dashboard() {
 
                         <label htmlFor="fname" >Instruction:</label>
                         <textarea value={codeinst} onChange={(e)=>{setCodeinst(e.target.value)}} style={{height:'10rem'}} id="cCode" name="code"/>
+                       
+                        <label htmlFor="fname" >Credits:</label>
+                        <textarea value={codecred} onChange={(e)=>{setCodecred(e.target.value)}} style={{height:'10rem'}} id="ccCode" name="code"/>
                        
                         <label htmlFor="lname">Design Png </label>
                         <input type="file" id="lname" name="lname" onChange={handleChange}/>

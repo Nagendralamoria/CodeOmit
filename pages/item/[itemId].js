@@ -15,7 +15,8 @@ import Skeletongrey from '../../components/Skeletongrey';
 import Imageskeleton from '../../components/Imageskeleton';
 import Head from 'next/head';
 
-
+import Link from 'next/link';
+import { async } from '@firebase/util';
 
 function Itempage() {
     const [isActive, setIsActive] = useState(true);
@@ -26,25 +27,36 @@ function Itempage() {
     const  itemId  = router.query.itemId;
     const [componentscode,setComponentcode]=useState([]);
     const [relatedpost,setRelatedPost]=useState([]);
+    const [creditsofimage,setCreditsofimages]=useState([]);
     const componentsCollectionRef = doc(db,"componentscode",`${itemId}`);
- 
+     
+    const credimg = ()=>{
+      if(creditsofimage){
+      const xyz = creditsofimage.toString().split(",");  
+      return (
+           xyz.map((ccs)=>{
+               return(
+                <>  <Link href={ccs} target="_blank">{ccs}</Link> <br></br></>
+              
+               )
+            }) 
+        )
+          }
+    } 
     useEffect(()=>{
   
       const getComponents = async()=>{
         const data = await getDoc(componentsCollectionRef);
         setComponentcode(data.data());
         setLoadingPage(true);
-        // if (data.exists()) {
-        //     console.log("Document data:", data.data().name);
-            
-        //   } else {
-        //     // doc.data() will be undefined in this case
-        //     console.log("No such document!");
-        //   }
+       
     };
     
       getComponents();
     },[itemId])
+    useEffect(()=>{
+         setCreditsofimages(componentscode.codecred);
+    },[componentscode])
   return (
     <>
     <Head>
@@ -237,14 +249,82 @@ function Itempage() {
         </div>
                 </div>
               )}
-              <h1>{componentscode?.name}</h1>
-
+              <h1>{componentscode?.titlename}</h1>
+              
               <div className={pagecss.pagetext}>
+              <h2>Introduction</h2>
               <p>
                 {componentscode?.codeinst}
               </p>
-              </div>
            
+            
+              <h2>{componentscode?.name} using HTML/CSS</h2>
+              
+             <div className={pagecss.miniblogdivs}>
+             <h3>Step 1: Create Files</h3>
+              <p>The first step is to create two files: an HTML file and a CSS file or if you already have a project file and looking for component you can skip these step. The HTML file should be named index.html and the CSS file should be named style.css these are the first criteria for creating a {componentscode?.name}. </p>
+              
+              <h3>Step 2: Insert the Code</h3>
+              <p>Once you have created the files, insert the provided codes into each file and place the flip card code on assumed place. The HTML code should go into index.html and the CSS code should go into style.css.</p>
+              
+              <h3>Step 3: Link the CSS File</h3>
+              <p>In order for the {componentscode?.name} to work properly, you must link the CSS file to the HTML file.To do this, insert the below code before the title tag.</p>
+              <CopyBlock  style={{whiteSpace: 'pre-line'}}
+            
+          language="html"
+          text={`<link rel="stylesheet" href="style.css"> `}
+          codeBlock
+          theme={dracula}
+          showLineNumbers={true}
+          wrapLines
+        />
+             </div>
+
+              <h2>How To Create {componentscode?.name} Components in React.</h2>
+              <p>Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+To create a {componentscode?.name} component we requires a project file. If you have a project file you can skip the first step.</p>
+<div className={pagecss.miniblogdivs}>
+              <h3>Step 1: Create a New React app using:</h3>
+              <p>Run this command in VS Code terminal.</p>
+              <CopyBlock  style={{whiteSpace: 'pre-line'}}
+            
+          language="js"
+          text={`npx create-react-app my-app 
+cd my-app
+npm start`}
+          codeBlock
+          theme={dracula}
+          showLineNumbers={true}
+          wrapLines
+        />
+        <h3>Step 2: Create the Component</h3>
+        <p>To do this, create a new file in the src/ components directory called {componentscode?.name}.js. In this file, you’ll need to import the {componentscode?.name} code at the top and then create a class component called {componentscode?.name}. Within the component, you’ll need to add the code.</p>
+        <p>And that’s it! You now have a fully functional {componentscode?.name} on your React app. You can customize it further by adding additional styling and behavior</p>
+        </div>
+        <h2>How To Create {componentscode?.name} Components in AngularJS</h2>
+        <div className={pagecss.miniblogdivs}>
+        <h3>Step 1: Create Component</h3>
+        <CopyBlock  style={{whiteSpace: 'pre-line'}}
+            
+            language="js"
+            text={`ng generate component FlipCard`}
+            codeBlock
+            theme={dracula}
+            showLineNumbers={true}
+            wrapLines
+          />
+        <h3>Step 2: Insert the Code</h3>
+        <p>When you run this code, a folder with the same name as the component will be created. This folder will contain one TypeScript file, one HTML file, and one CSS file. Copy the given codes and put them in the right files, and put the code for the {componentscode?.name} in the correct place.</p>
+       </div>
+        <h2>Image Credits</h2>
+        <p>
+              { credimg()} 
+              </p>
+              
+        </div>
+        <div className={pagecss.maxheightcontainer}>
+              </div>
+              
             </div>
           {/* <div className={pagecss.relatedpostmain}>
                 <h3>Related Posts </h3>
