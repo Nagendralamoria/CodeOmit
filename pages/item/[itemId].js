@@ -60,9 +60,9 @@ function Itempage() {
   return (
     <>
     <Head>
-        <title>{componentscode?.name} - Codeomit</title>
+        <title>{componentscode?.titlename} - Codeomit</title>
         <meta name="description" content={`${componentscode?.codeinst}`} />
-        <meta property="og:title" content={`${componentscode?.name} - Codeomit`} />
+        <meta property="og:title" content={`${componentscode?.titlename} - Codeomit`} />
         <meta property="og:description" content={`${componentscode?.codeinst}`} />
         <meta property="og:url" content={`https://codeomit/item/${itemId}`} />
         <meta property="og:type" content="website" />
