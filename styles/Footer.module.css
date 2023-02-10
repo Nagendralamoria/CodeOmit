@@ -27,9 +27,12 @@
     font-size: 2rem;
     display: flex;
     gap: 2rem;
+    cursor: pointer;
   
 }
-
+.cd:hover{
+    color: rgb(250, 250, 250);
+}
 @media (max-width:500px) {
     .footermainbody{
         background-color: #96C3FF;
@@ -55,6 +58,6 @@
         font-size: 1.5rem;
         display: flex;
         gap: 1rem;
-      
+        cursor: pointer;
     }
 }

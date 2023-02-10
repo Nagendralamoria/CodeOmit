@@ -5,7 +5,7 @@ import Router from 'next/router'
 
 function Itemcard(props) {
   const getlinkfunction=()=>{
-    Router.push('/item/'+`${props.Id}`)
+    Router.push('/item/'+`${props.Id}?${props.name}`)
   }
   return (
         <div className={mainpagecss.itemcard} onClick={()=>{getlinkfunction()}}>

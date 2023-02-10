@@ -316,10 +316,12 @@ npm start`}
         <h3>Step 2: Insert the Code</h3>
         <p>When you run this code, a folder with the same name as the component will be created. This folder will contain one TypeScript file, one HTML file, and one CSS file. Copy the given codes and put them in the right files, and put the code for the {componentscode?.name} in the correct place.</p>
        </div>
+       {componentscode?.codecred!=''?
+       <>
         <h2>Image Credits</h2>
-        <p>
+        <p className={pagecss.blueclr}>
               { credimg()} 
-              </p>
+              </p></>:null}
               
         </div>
         <div className={pagecss.maxheightcontainer}>

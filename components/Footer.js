@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import React from 'react'
 import {BsInstagram} from 'react-icons/bs'
-import {BsTwitter,BsLinkedin} from 'react-icons/bs'
+import {BsFacebook,BsYoutube} from 'react-icons/bs'
 import footercss from '../styles/Footer.module.css'
 function Footer() {
   return (
@@ -8,9 +9,16 @@ function Footer() {
         <div className={footercss.footerlogo}>
             <h1>Codeomit</h1>
             <div className={footercss.footericons}>
-          <BsInstagram/>
-          <BsTwitter/>
-          <BsLinkedin/>
+              <Link  href={"https://www.instagram.com/codeomit/"}>
+          <BsInstagram className={footercss.cd}/>
+          </Link>
+              <Link  href={"https://www.youtube.com/@codeomit"}>
+          <BsYoutube className={footercss.cd}/>
+          </Link>
+              <Link  href={"https://www.facebook.com/people/CodeOmit/100087959933825/"}>
+
+          <BsFacebook className={footercss.cd}/>
+          </Link>
         </div>
         </div>
      
