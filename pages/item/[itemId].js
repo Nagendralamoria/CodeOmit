@@ -70,7 +70,7 @@ function Itempage() {
 </Head>
     <div className={pagecss.pagemain}  >
         <BiArrowBack className={pagecss.backicon} onClick={() => router.back()}/>
-        <h2>{componentscode?.nameofcoder}</h2>
+        {/* <h2>{componentscode?.nameofcoder}</h2> */}
         
         <div className={pagecss.designgrid}>
           <div className={pagecss.previewcodebuttonbody}>
