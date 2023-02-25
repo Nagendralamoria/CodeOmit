@@ -7,9 +7,7 @@ import blogsindicss from '../../styles/Blogsindipage.module.css'
 function blogsId() {
     const router = useRouter();
     const  itemId  = router.query.blogsId;
-    const[loadingpage,setLoadingPage]=useState(false);
     const [componentscode,setComponentcode]=useState([]);
-    const [creditsofimage,setCreditsofimages]=useState([]);
     const componentsCollectionRef = doc(db,"blogs",`${itemId}`);
       
       useEffect(()=>{
