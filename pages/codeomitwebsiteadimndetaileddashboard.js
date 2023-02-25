@@ -10,8 +10,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import Router from 'next/router'
 function Dashboard() {
   const [userin,SetUserIn]=useState(false);
-
-
  const [name,setName]=useState("");
  const [titlename,setTitlename]=useState("");
  const [openTab,setOpenTab]=useState("1");
@@ -42,7 +40,7 @@ function Dashboard() {
       // ...
     } else {
            Router.push('/codeomitadmintitanicthanos');
-      console.log("nothing");
+      // console.log("nothing");
     }
   });
 
@@ -165,7 +163,7 @@ function Dashboard() {
                             display: openTab==="1" ? 'block':'none',
                            
                             }}>Html Code</label>
-                        <textarea style={{
+                          <textarea style={{
                             display: openTab==="1" ? 'block':'none',
                             height:'10rem',
                             }} value={langhtml} onChange={(e)=>{setLanghtml(e.target.value)}}  id="cCode" name="code"/>
