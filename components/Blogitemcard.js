@@ -40,12 +40,10 @@ function Blogitemcard(props) {
       return (
        
         <div className={mainpagecss.itemcard}>
-             <Link href={`edititem/${props.Id}`}>
-        <img src={props.imageref} alt='new'/>
-        </Link>
+            <img  src={props.imageref} alt='new'/>
         <div className={mainpagecss.ediitemrow}>
-        <h3>{props.name}</h3>
-        <AiFillDelete onClick={()=>{deleteitem(props.Id)}} className={mainpagecss.edititemdelete}></AiFillDelete>
+            <h3>{props.name}</h3>
+            <AiFillDelete onClick={()=>{deleteitem(props.Id)}} className={mainpagecss.edititemdelete}></AiFillDelete>
             </div>
     </div>
       )

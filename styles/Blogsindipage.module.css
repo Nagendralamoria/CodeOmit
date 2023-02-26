@@ -10,6 +10,7 @@
 }
 .blog_indi_parent>p{
     max-width: 70%;
+    white-space: pre-wrap;
     text-align: center;
 }
 .blog_indi_parent>img{

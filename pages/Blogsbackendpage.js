@@ -1,5 +1,4 @@
 import DashboardNavbar from "../components/DashboardNavbar"
-import Dashboarditemcard from "../components/Dashboarditemcard";
 import dashcss from '../styles/Dashboard.module.css'
 import { addDoc, collection, doc, getDocs, setDoc } from "firebase/firestore"; 
 import { useEffect, useState } from "react";
@@ -117,7 +116,7 @@ function Blogsbackednpage() {
         <DashboardNavbar/>
         <div className={dashcss.designcodemainbody}>
             <h2>Dashboard</h2>
-            {name.replace(/\s/g, '')}
+           
             <div className={dashcss.designcodebox}>
                 <div className={dashcss.designcodeinputbox}>
                         <h3>Enter the data</h3>

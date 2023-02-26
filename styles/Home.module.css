@@ -88,10 +88,10 @@ gap: 1.5rem;
   text-align: left;
   cursor: pointer;
 }
-.itemcard>h3{
+.itemcard h3{
   margin: 0.5rem;
 }
-.itemcard>img{
+.itemcard img{
   width: 100%;
   height: 15rem;
 border-radius: 0.5rem;
