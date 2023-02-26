@@ -33,7 +33,6 @@ function blogsId() {
             <img alt='card' src="https://cdn.pixabay.com/photo/2023/01/05/22/35/flower-7700011_960_720.jpg"/>
             <h4>Full Stack Developer</h4>
             </div>
-            
             <div className={blogsindicss.blog_indi_textare_line}>
             <p></p>             
             </div>
