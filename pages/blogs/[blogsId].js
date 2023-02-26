@@ -4,7 +4,7 @@ import {React, useEffect, useState}  from 'react'
 import Navbar from '../../components/Navbar'
 import  {db}  from '../../firebase';
 import blogsindicss from '../../styles/Blogsindipage.module.css'
-function blogsId() {
+function BlogsId() {
     const router = useRouter();
     const  itemId  = router.query.blogsId;
     const [componentscode,setComponentcode]=useState([]);
@@ -44,4 +44,4 @@ function blogsId() {
   )
 }
 
-export default blogsId
+export default BlogsId

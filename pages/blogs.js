@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Blogscard from '../components/Blogscard'
 import blogspagecss from '../styles/Blogshomepage.module.css'
 import { db } from '../firebase';
 import { collection, getDocs } from 'firebase/firestore';
-function blogs() {
+function Blogs() {
   const [loadingpage,setLoadingPage] = useState(false);
    const [componentscode,setComponentcode]=useState([]);
    const componentsCollectionRef = collection(db,"blogs");
@@ -48,4 +48,4 @@ function blogs() {
   )
 }
 
-export default blogs
+export default Blogs

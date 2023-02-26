@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import { onAuthStateChanged } from "firebase/auth";
 import Router from 'next/router'
 import Blogitemcard from "../components/Blogitemcard";
-function blogsbackednpage() {
+function Blogsbackednpage() {
   const [userin,SetUserIn]=useState(false);
  const [name,setName]=useState("");
  const [nameUrl,setNameUrl]=useState("");
@@ -159,4 +159,4 @@ function blogsbackednpage() {
   )
 }
 
-export default blogsbackednpage
+export default Blogsbackednpage

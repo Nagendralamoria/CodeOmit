@@ -15,6 +15,7 @@
 }
 .navbarlinks{
     display: flex;
+    gap: 1rem;
  
 }
 .navbarlinks>h3{
