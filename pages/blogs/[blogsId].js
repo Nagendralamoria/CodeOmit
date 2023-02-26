@@ -1,21 +1,21 @@
 import { doc, getDoc } from 'firebase/firestore';
-import  useRouter  from 'next/router';
+import  {useRouter } from 'next/router';
 import {React, useEffect, useState}  from 'react'
 import Navbar from '../../components/Navbar'
-import  db  from '../../firebase';
+import  {db}  from '../../firebase';
 import blogsindicss from '../../styles/Blogsindipage.module.css'
 function blogsId() {
     const router = useRouter();
     const  itemId  = router.query.blogsId;
     const [componentscode,setComponentcode]=useState([]);
     const componentsCollectionRef = doc(db,"blogs",`${itemId}`);
-      useEffect(()=>{
-    
+
+      useEffect(()=>{ 
+     
         const getComponents = async()=>{
           const data = await getDoc(componentsCollectionRef);
-          console.log(data.data());
           setComponentcode(data.data());
-          setLoadingPage(true);
+          // setLoadingPage(true);
          
       };
         getComponents();
