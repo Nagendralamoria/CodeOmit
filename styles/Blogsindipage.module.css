@@ -9,9 +9,13 @@
     margin: 1rem;
 }
 .blog_indi_parent>p{
-    max-width: 70%;
+    max-width: 100%;
     white-space: pre-wrap;
     text-align: center;
+}
+.blogs_indi_textare_para{
+    white-space: pre-wrap;
+
 }
 .blog_indi_parent>img{
     margin-top: 2rem;
