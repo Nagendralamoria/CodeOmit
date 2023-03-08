@@ -1,6 +1,7 @@
 import { doc, getDoc } from "firebase/firestore";
 import { useRouter } from "next/router";
 import { React, useEffect, useState } from "react";
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { db } from "../../firebase";
 import blogsindicss from "../../styles/Blogsindipage.module.css";
@@ -42,6 +43,7 @@ function BlogsId() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

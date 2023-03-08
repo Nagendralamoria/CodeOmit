@@ -1,9 +1,9 @@
 .blogs_card_grid{
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: space-between;
     margin: 2rem;
-    grid-template-columns: 22% 22% 22% 22% ;
+    grid-template-columns: 23% 23% 23% 23% ;
 }
 .blogs_home_parent{
 text-align: center;

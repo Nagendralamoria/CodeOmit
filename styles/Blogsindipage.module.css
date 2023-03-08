@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,300&display=swap');
 .blog_indi_parent{
     margin: 4rem;
     display: flex;
+    font-family: 'Poppins';
     flex-direction: column;
     align-items: center;
 }
 .blog_indi_parent>h1{
     font-size: 2.5rem;
+
     margin: 1rem;
 }
 .blog_indi_parent>p{
     max-width: 100%;
+
     white-space: pre-wrap;
     text-align: center;
 }
