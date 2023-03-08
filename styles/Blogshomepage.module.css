@@ -1,13 +1,11 @@
 .blogs_card_grid{
     display: grid;
     gap: 1.5rem;
-
     justify-content: space-between;
-    margin: 4rem;
-    grid-template-columns: auto auto auto auto;
+    margin: 2rem;
+    grid-template-columns: 22% 22% 22% 22% ;
 }
 .blogs_home_parent{
-
 text-align: center;
 }
 .blogs_home_maintexxt{
@@ -19,7 +17,9 @@ text-align: center;
     margin: 0rem;
     color: #293462;
 }
-.blogs_home_maintexxt>h2{   color: #293462;}
+.blogs_home_maintexxt>h2{ 
+      color: #293462;
+    }
 .blogs_home_maintexxt>p{
     color: #293462;
 }
@@ -27,16 +27,18 @@ text-align: center;
 @media (max-width:1250px) {
     .blogs_card_grid{
         gap: 1rem;
-        grid-template-columns: auto auto auto;
+        grid-template-columns:  30% 30% 30% ;
     }
 }
 @media (max-width:750px) {
     .blogs_card_grid{
-        grid-template-columns: auto auto;
+        margin: 2rem;
+        grid-template-columns: 48% 48%;
     }
 }
 @media (max-width:450px) {
 .blogs_card_grid{
+    margin: 1rem;
     grid-template-columns: auto;
 }
 }

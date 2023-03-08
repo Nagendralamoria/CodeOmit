@@ -50,9 +50,7 @@
 .blog_indi_textare_line{
     border-right: 0.2rem solid;
 }
-@media (max-width:1250px) {
 
-}
 @media (max-width:950px) {
     .blog_indi_suggestedblogs{
         display: flex;
@@ -85,6 +83,11 @@
         border-radius: 1rem;
         
     }   
+    .blog_indi_parent>h1{
+        font-size: 2.5rem;
+        text-align: center;
+        margin: 1rem;
+    }
 }
 @media (max-width:450px) {
     .blog_indi_parent>h1{
@@ -99,5 +102,6 @@
         object-fit: cover;
         border-radius: 1rem;
         
-    }   
+    }
+   
 }
