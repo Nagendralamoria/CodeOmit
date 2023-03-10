@@ -1,4 +1,5 @@
 import { doc, getDoc } from "firebase/firestore";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { React, useEffect, useState } from "react";
 import Footer from "../../components/Footer";
@@ -22,11 +23,26 @@ function BlogsId() {
 
   return (
     <>
+      <Head>
+        <title>{componentscode?.title} - Codeomit</title>
+        <meta name="description" content={`${componentscode?.introduction}`} />
+        <meta
+          property="og:title"
+          content={`${componentscode?.title} - Codeomit`}
+        />
+        <meta
+          property="og:description"
+          content={`${componentscode?.introduction}`}
+        />
+        <meta property="og:url" content={`https://codeomit/blogs/${itemId}`} />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <div className={blogsindicss.blog_indi_parent}>
         <h1>{componentscode?.title}</h1>
         <p>{componentscode?.introduction} </p>
-        <img alt="card" src={componentscode?.compimage} />
+        <img alt={`${componentscode.title}`} src={componentscode?.compimage} />
         <div className={blogsindicss.blog_indi_textarea}>
           <div className={blogsindicss.blog_indi_suggestedblogs}>
             <img

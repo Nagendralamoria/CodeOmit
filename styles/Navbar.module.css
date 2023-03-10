@@ -1,16 +1,24 @@
 .navbarmain{
-
- background-color: #96C3FF;
+    background-color: #96C3FF;
     display: flex;
- justify-content: space-between;
- align-items: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 0rem 1rem;
-    
 }
 .logo{
     display: grid;
-    grid-template-columns: 50% 50%;
-   
+    grid-template-columns: 35% 50%;
+    align-items: center;   
+}
+.Imagert{
+    rotate: -30deg;
+    object-fit: cover;
+}
+.Imagert:hover{
+   transform: rotate(30deg);
+   background-color: white;
+   border-radius: 100px;
+   transition-duration: 1s;
     
 }
 .navbarlinks{
@@ -33,30 +41,58 @@
     cursor: pointer;
     margin: 0.8rem 0rem;
 }
-.navbarlist{
+/* .navbarlist{
     display: flex;
     cursor: pointer;
     gap: 1rem;
     color: rgb(82, 82, 82);
     justify-content: flex-end;
-}
-
+} */
+.closeicon{
+    display: none;
+   }
+   .displayclass{
+    display: block;
+   }
+   .hideclass{
+    display: block;
+   }
+   .navicons{
+    font-size: 2rem;
+   }
 @media (max-width:600px) {
+
     .logo{
         display: grid;
-        grid-template-columns: 40% 60%;
-       margin: 0rem;
-        
+        grid-template-columns: 30% 60%;
+        margin: 0rem;
+        padding: 0rem 0.5rem;
+
     }
     .navbarmain{
-
         background-color: #96C3FF;
-           display: flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
         justify-content: space-between;
         align-items: center;
-           padding: 0rem 0.5rem;
+        padding: 0rem 0rem;
            
-       }
+    }
+    .navbarlinks{
+        display: flex;
+        position: absolute;
+        z-index: 99999;
+        width: 100%;
+        height: 40vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #96C3FF;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 0.5rem;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        color: rgb(82, 82, 82);
+    }
     .navbarmain>h2{
         font-size: 1rem;
         margin: 0.8rem 0rem;
@@ -64,4 +100,16 @@
     .navbarmain>h3{
         font-size: 1rem;
     }
+    .closeicon{
+
+        display: flex;
+        justify-content: flex-end;
+        padding: 0rem 0.5rem;
+    }
+    .displayclass{
+        display: block;
+       }
+       .hideclass{
+        display: none;
+       }  
 }

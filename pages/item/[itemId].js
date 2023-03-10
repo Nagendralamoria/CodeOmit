@@ -116,7 +116,10 @@ function Itempage() {
           {isActive ? (
             <div className={pagecss.designbox}>
               {loadingpage ? (
-                <img src={componentscode?.compimage} />
+                <img
+                  alt={`${componentscode.titlename}`}
+                  src={componentscode?.compimage}
+                />
               ) : (
                 <Imageskeleton />
               )}
